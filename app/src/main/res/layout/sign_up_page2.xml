@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:layout_marginRight="30dp"
+    android:layout_marginLeft="30dp"
+    android:id="@+id/sign_up_2"
+    android:visibility="invisible"
+    >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#555c5b"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/layer2"
+                    android:padding="16dp"/>
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/drivingInstruction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#626562"
+                android:padding="16dp"
+                android:hint="Default Driving Instruction(optional)"
+                android:textColorHint="#fff"
+                android:textSize="14dp"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:singleLine="true"
+
+                />
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#555c5b"
+                >
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/name"
+                    android:padding="16dp"/>
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/specialInstruction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#626562"
+                android:padding="16dp"
+                android:hint="Default Special Instruction(optional)"
+                android:textColorHint="#fff"
+                android:textSize="14dp"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:singleLine="true"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#555c5b"
+                >
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/address"
+                    android:padding="16dp"/>
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/cellPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#626562"
+                android:padding="16dp"
+                android:hint="Cell Phone(optional)"
+                android:textColorHint="#fff"
+                android:textSize="14dp"
+                android:inputType="number"
+                android:textColor="#fff"
+                android:singleLine="true"
+
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            >
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#555c5b"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/layer5"
+                    android:padding="16dp"/>
+            </FrameLayout>
+            <EditText
+                android:id="@+id/officePhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#626562"
+                android:padding="16dp"
+                android:hint="Office Phone(optional)"
+                android:textColorHint="#fff"
+                android:textSize="14dp"
+                android:inputType="number"
+                android:textColor="#fff"
+                android:singleLine="true"
+                />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#555c5b"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/layer5"
+                android:padding="16dp"/>
+        </FrameLayout>
+        <EditText
+            android:id="@+id/officePhone1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#626562"
+            android:padding="16dp"
+            android:hint="Office Phone(optional)"
+            android:textColorHint="#fff"
+            android:textSize="14dp"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:singleLine="true"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextPage2"
+            android:src="@drawable/layer6"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:padding="16dp"
+            android:background="#d57177"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/previousPage2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/layer7"
+            android:padding="16dp"
+            android:background="#d57177"/>
+    </RelativeLayout>
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#d57177"
+
+            >
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/layer6"
+                android:padding="16dp"
+                android:id="@+id/previousPage2"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#d57177"
+
+            >
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/layer6"
+                android:padding="16dp"
+                android:id="@+id/nextPage2" />
+        </FrameLayout>
+
+
+
+    </LinearLayout>-->
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:layout_marginRight="30dp"
+    android:layout_marginLeft="30dp"
+    android:id="@+id/sign_up_3"
+    android:visibility="invisible"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#555c5b"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/layer2"
+                android:padding="16dp"/>
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/cardHolderGame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#626562"
+            android:padding="16dp"
+            android:hint="Card Holder Name"
+            android:textColorHint="#fff"
+            android:textSize="14dp"
+            android:inputType="text"
+            android:textColor="#fff"
+            android:singleLine="true"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#555c5b"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/name"
+                android:padding="16dp"/>
+        </FrameLayout>
+
+
+        <Spinner
+            android:id="@+id/spinnerCardType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/card_type"
+            android:prompt="@string/country_prompt"
+            android:background="#555c5b"
+            android:textSize="14dp"
+            android:padding="16dp"
+            android:textColor="#fff"
+            style="@android:style/Widget.Spinner"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#555c5b"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/address"
+                android:padding="16dp"/>
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/creditCardNo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#626562"
+            android:padding="16dp"
+            android:hint="Credit Card No"
+            android:textColorHint="#fff"
+            android:textSize="14dp"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:singleLine="true"
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#555c5b"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/layer5"
+                android:padding="16dp"/>
+        </FrameLayout>
+        <EditText
+            android:id="@+id/cvv2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#626562"
+            android:padding="16dp"
+            android:hint="CVV2(optional)"
+            android:textColorHint="#fff"
+            android:textSize="14dp"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:singleLine="true"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+            <Spinner
+                android:id="@+id/expirationMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/month_array"
+                android:prompt="@string/month_prompt"
+                android:background="#555c5b"
+                android:padding="16dp"
+                style="@android:style/Widget.Spinner"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+            <Spinner
+                android:id="@+id/expirationYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/year_array"
+                android:prompt="@string/year_prompt"
+                android:background="#555c5b"
+                android:padding="16dp"
+                style="@android:style/Widget.Spinner"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/submitRegister"
+            android:src="@drawable/layer6"
+            android:text="Register"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:padding="16dp"
+            android:background="#d57177"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/previousPage3"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/layer7"
+            android:padding="16dp"
+            android:background="#d57177"/>
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
