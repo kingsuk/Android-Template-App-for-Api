@@ -227,7 +227,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:padding="16dp"
-            android:background="#d57177"/>
+            android:background="@color/app_theme_color"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -238,7 +238,7 @@
             android:layout_alignParentStart="true"
             android:src="@drawable/layer7"
             android:padding="16dp"
-            android:background="#d57177"/>
+            android:background="@color/app_theme_color"/>
     </RelativeLayout>
 
 

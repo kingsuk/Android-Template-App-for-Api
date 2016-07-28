@@ -13,15 +13,20 @@ import java.util.HashMap;
  * Created by root on 15/7/16.
  */
 public class RegisterUser {
-
+    String method;
     public AsyncResponse.Response delegate = null;
+
+    RegisterUser(String method)
+    {
+        this.method = method;
+    }
 
 
     public void register(final HashMap<String, String> data, String route) {
         final String FEED_URL = UserConstants.BASE_URL+route;
         class RegisterUserData extends AsyncTask<String, Void, String> {
 
-            ConnectToServer ruc = new ConnectToServer();
+            ConnectToServer ruc = new ConnectToServer(method);
 
 
             @Override
@@ -33,8 +38,6 @@ public class RegisterUser {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
-
-                Log.i("kingsukmajumder",s);
 
                 delegate.processFinish(s);
             }

@@ -19,6 +19,11 @@ import javax.net.ssl.HttpsURLConnection;
  */
 
 public class ConnectToServer {
+    String method;
+    ConnectToServer(String method)
+    {
+        this.method = method;
+    }
 
 
     public String sendPostRequest(String requestURL,
@@ -32,7 +37,7 @@ public class ConnectToServer {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setReadTimeout(15000);
             conn.setConnectTimeout(15000);
-            conn.setRequestMethod("POST");
+            conn.setRequestMethod(method);
             conn.setDoInput(true);
             conn.setDoOutput(true);
 

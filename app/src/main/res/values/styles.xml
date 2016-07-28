@@ -9,6 +9,27 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
 
+
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="boldText">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="NavigationTheme">
+        <item name="android:background">@drawable/backimage</item>
     </style>
 
 </resources>

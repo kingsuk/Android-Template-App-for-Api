@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="us.tier5.u_rang.Dashboard"
+    tools:showIn="@layout/app_bar_main"
+    android:background="@drawable/signup">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="NEW PICK-UP"
+        android:textColor="#ffffff"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/button"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/dash_button"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="YOUR PICK-UPS"
+        android:textColor="#ffffff"
+        android:id="@+id/textView2"
+        android:textStyle="bold"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView2">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Total Pick-Ups:"
+                    android:id="@+id/textView5"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="39dp"
+                    android:layout_marginStart="39dp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="31dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView6"
+                    android:layout_alignTop="@+id/textView5"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="31dp"
+                    android:layout_marginEnd="31dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Scheduled Pick-Ups:"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView7"
+                    android:layout_marginTop="60dp"
+                    android:layout_below="@+id/textView5"
+                    android:layout_alignLeft="@+id/textView5"
+                    android:layout_alignStart="@+id/textView5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView8"
+                    android:layout_alignBottom="@+id/textView7"
+                    android:layout_alignLeft="@+id/textView6"
+                    android:layout_alignStart="@+id/textView6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Picked Up:"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView9"
+                    android:layout_below="@+id/textView7"
+                    android:layout_alignLeft="@+id/textView7"
+                    android:layout_alignStart="@+id/textView7"
+                    android:layout_marginTop="60dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView10"
+                    android:layout_alignBottom="@+id/textView9"
+                    android:layout_alignRight="@+id/textView8"
+                    android:layout_alignEnd="@+id/textView8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Process Pick-Ups:"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView11"
+                    android:layout_below="@+id/textView9"
+                    android:layout_alignLeft="@+id/textView9"
+                    android:layout_alignStart="@+id/textView9"
+                    android:layout_marginTop="60dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView12"
+                    android:layout_alignBottom="@+id/textView11"
+                    android:layout_alignRight="@+id/textView10"
+                    android:layout_alignEnd="@+id/textView10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Dellivered Pick-Ups:"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView13"
+                    android:layout_below="@+id/textView11"
+                    android:layout_alignLeft="@+id/textView11"
+                    android:layout_alignStart="@+id/textView11"
+                    android:layout_marginTop="60dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:textColor="#ffffff"
+                    android:id="@+id/textView14"
+                    android:layout_alignBottom="@+id/textView13"
+                    android:layout_alignRight="@+id/textView12"
+                    android:layout_alignEnd="@+id/textView12" />
+
+            </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
