@@ -20,9 +20,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Animation slide_in_right = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_in_right);
-        get = (LinearLayout) findViewById(R.id.get);
-        get.startAnimation(slide_in_right);
+
 
 
         new Handler().postDelayed(new Runnable() {

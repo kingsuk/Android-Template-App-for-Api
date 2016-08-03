@@ -21,7 +21,7 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Dashboard" />
         <activity
@@ -63,6 +63,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="us.tier5.u_rang.Dashboard" />
+        </activity>
+        <activity
+            android:name=".DashboardNew"
+            android:label="@string/title_activity_dashboard_new"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cooltechworks.creditcarddesign.CardEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PickupRequest"
+            android:label="@string/title_activity_pickup_request"
+            android:parentActivityName=".DashboardNew"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="us.tier5.u_rang.DashboardNew" />
         </activity>
     </application>
 

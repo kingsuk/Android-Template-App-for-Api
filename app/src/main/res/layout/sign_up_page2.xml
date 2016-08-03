@@ -16,8 +16,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-
             android:orientation="horizontal">
 
             <FrameLayout
@@ -33,7 +31,7 @@
             </FrameLayout>
 
             <EditText
-                android:id="@+id/drivingInstruction"
+                android:id="@+id/driving_instruction"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#626562"
@@ -69,12 +67,12 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/name"
+                    android:src="@drawable/layer2"
                     android:padding="16dp"/>
             </FrameLayout>
 
             <EditText
-                android:id="@+id/specialInstruction"
+                android:id="@+id/spcl_instruction"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#626562"
@@ -103,14 +101,14 @@
                 android:background="#555c5b"
                 >
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/layer5"
                     android:padding="16dp"/>
             </FrameLayout>
 
             <EditText
-                android:id="@+id/cellPhone"
+                android:id="@+id/cell_phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#626562"
@@ -130,11 +128,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-
             android:layout_gravity="center"
             android:gravity="center"
             android:layout_marginTop="16dp"
+            android:orientation="horizontal"
             >
             <FrameLayout
                 android:layout_width="wrap_content"
@@ -148,7 +145,7 @@
                     android:padding="16dp"/>
             </FrameLayout>
             <EditText
-                android:id="@+id/officePhone"
+                android:id="@+id/office_phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#626562"
@@ -183,12 +180,12 @@
                 android:padding="16dp"/>
         </FrameLayout>
         <EditText
-            android:id="@+id/officePhone1"
+            android:id="@+id/residentialPhone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#626562"
             android:padding="16dp"
-            android:hint="Office Phone(optional)"
+            android:hint="Residential Phone(optional)"
             android:textColorHint="#fff"
             android:textSize="14dp"
             android:inputType="number"

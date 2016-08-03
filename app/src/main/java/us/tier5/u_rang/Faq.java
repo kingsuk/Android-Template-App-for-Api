@@ -161,61 +161,6 @@ public class Faq extends AppCompatActivity implements AsyncResponse.Response{
                         }
                     }.execute();
 
-                    /*LinearLayout ll = new LinearLayout(this);
-                    ll.setOrientation(LinearLayout.VERTICAL);
-                    ll.setGravity(Gravity.TOP);
-
-                    // Create Question TextView
-                    TextView questionTV = new TextView(this);
-                    questionTV.setText(question);
-
-                    if (Build.VERSION.SDK_INT < 23) {
-                        questionTV.setTextAppearance(getApplicationContext(), R.style.boldText);
-                    } else {
-                        questionTV.setTextAppearance(R.style.boldText);
-                    }
-                    ll.addView(questionTV);//adding the textview to layout
-
-
-                    //Create Image View
-                    *//*final ImageView imageViewFaQ = new ImageView(this);
-                    new AsyncTask<Void, Void, Void>() {
-                        Bitmap bmp;
-                        @Override
-                        protected void onPreExecute() {
-                            super.onPreExecute();
-                        }
-                        @Override
-                        protected Void doInBackground(Void... params) {
-                            try {
-                                InputStream in = new URL(imageUrl).openStream();
-                                bmp = BitmapFactory.decodeStream(in);
-                            } catch (Exception e) {
-                                Toast.makeText(getApplicationContext(),"Some error occoured while loading images!",Toast.LENGTH_LONG).show();
-                                Log.i("kingsukmajumder","error in loading images "+e.toString());
-                            }
-                            return null;
-                        }
-
-                        @Override
-                        protected void onPostExecute(Void result) {
-                            //loading.dismiss();
-                            if (bmp != null)
-                                imageViewFaQ.setImageBitmap(bmp);
-                        }
-                    }.execute();
-                    imageViewFaQ.setLayoutParams(LLparams);
-                    imageViewFaQ.setScaleType(ImageView.ScaleType.FIT_XY);
-                    ll.addView(imageViewFaQ);*//*
-
-                    //Create Answer TextView
-                    TextView answerTV = new TextView(this);
-                    answerTV.setText("ANSWER: "+answer);
-                    ll.addView(answerTV);*/
-
-
-
-
 
                     lm.addView(inflatedLayout);//adding the total laout to parent layout
                 }

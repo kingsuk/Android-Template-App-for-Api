@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse.Re
 
         if (restoredText != 0)
         {
-            Intent i = new Intent(LoginActivity.this,Dashboard.class);
+            Intent i = new Intent(LoginActivity.this,DashboardNew.class);
             startActivity(i);
         }
 
@@ -74,19 +74,27 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse.Re
                 String InputEmail = email.getText().toString();
                 String InputPass = pass.getText().toString();
 
-                data.put("email",InputEmail);
-                data.put("password",InputPass);
-
-                if(CheckNetwork.isInternetAvailable(getApplication())) //returns true if internet available
+                if(!InputEmail.equals("") && !InputPass.equals(""))
                 {
+                    data.put("email",InputEmail);
+                    data.put("password",InputPass);
 
-                    loading = ProgressDialog.show(LoginActivity.this, "Please Wait",null, true, true);
-                    registerUser.register(data,route);
+                    if(CheckNetwork.isInternetAvailable(getApplication())) //returns true if internet available
+                    {
+
+                        loading = ProgressDialog.show(LoginActivity.this, "Please Wait",null, true, true);
+                        registerUser.register(data,route);
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplication(),"No Internet Connection",Toast.LENGTH_SHORT).show();
+                    }
                 }
-                else
-                {
-                    Toast.makeText(getApplication(),"No Internet Connection",Toast.LENGTH_SHORT).show();
+                else {
+                    Toast.makeText(getApplicationContext(),"Email And Password Required",Toast.LENGTH_SHORT).show();
                 }
+
+
 
             }
         });
@@ -117,13 +125,13 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse.Re
                 if(editor.commit())
                 {
                     Toast.makeText(getApplication(),"Login Successful.",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(LoginActivity.this,Dashboard.class);
+                    Intent intent = new Intent(LoginActivity.this,DashboardNew.class);
                     startActivity(intent);
                 }
                 else
                 {
                     Toast.makeText(getApplication(),"Some problem occoured, You may have to login again when you launch the app!",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(LoginActivity.this,Dashboard.class);
+                    Intent intent = new Intent(LoginActivity.this,DashboardNew.class);
                     startActivity(intent);
                 }
 
@@ -132,6 +140,7 @@ public class LoginActivity extends AppCompatActivity implements AsyncResponse.Re
             {
                 Snackbar.make(this.findViewById(android.R.id.content), jsonObject.getString("message"), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Toast.makeText(getApplicationContext(),jsonObject.getString("message"),Toast.LENGTH_SHORT).show();
             }
 
         }

@@ -16,7 +16,7 @@ public class RegisterUser {
     String method;
     public AsyncResponse.Response delegate = null;
 
-    RegisterUser(String method)
+    public RegisterUser(String method)
     {
         this.method = method;
     }

@@ -7,4 +7,7 @@
     <color name="edittextcolor">#fff</color>
     <color name="app_theme_color_light">#f5ad7f</color>
     <color name="padded_back">#eed2d2d2</color>
+    <color name="dash_text_color">#fafafa</color>
+    <color name="mdtp_accent_color">#009688</color>
+    <color name="mdtp_accent_color_dark">#00796b</color>
 </resources>

@@ -1,0 +1,1502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="us.tier5.u_rang.PickupRequest"
+    tools:showIn="@layout/activity_pickup_request">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="52.5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dad8d8"
+                android:gravity="bottom"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:paddingTop="12dp">
+
+
+                <!--****UserName TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="USER NAME"
+                        android:textColor="#333333" />
+
+
+
+                </LinearLayout>
+
+
+                <!--****User name TEXT****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <EditText
+                            android:id="@+id/userName"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <!--<LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        >
+
+                        <EditText
+                            android:id="@+id/name4"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="33.5dp"
+                            android:textColorHint="#333333"
+                            android:background="#00000000"
+                            android:maxLines="1" />
+
+
+                    </LinearLayout>-->
+                </LinearLayout>
+
+                <!--****Name TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="NAME"
+                        android:textColor="#333333" />
+
+                </LinearLayout>
+
+
+                <!--**** name TEXT****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <EditText
+                            android:id="@+id/name"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--****Address TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PICK-Up ADDRESS"
+                        android:textColor="#333333" />
+
+                </LinearLayout>
+
+
+                <!--**** Address TEXT****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <EditText
+                            android:id="@+id/address"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--****Address TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PICK-Up DATE"
+                        android:textColor="#333333" />
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="date"
+                        android:id="@+id/pick_up_dateText"
+                        android:textColor="#333333" />
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/fa_calender"
+                        android:id="@+id/pick_up_date"/>
+                </LinearLayout>
+
+
+                <!--**** Address TEXT****-->
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <EditText
+                            android:id="@+id/pick_up_date"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+                <!--****SCHEDULE TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SCHEDULE"
+                        android:textColor="#333333" />
+
+                </LinearLayout>
+
+
+                <!--**** SCHEDULE TEXT****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <Spinner
+                            android:id="@+id/schedule"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:entries="@array/schedule_array"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--****boxed_or_hung TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BOX OR HUNG"
+                        android:textColor="#333333" />
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="boxed"
+                        android:id="@+id/boxed_or_hungText"
+                        android:textColor="#333333" />
+
+                    <com.rey.material.widget.Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:id="@+id/boxed_or_hungSwitch"
+                        android:layout_below="@+id/logo"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="0dp"
+                        android:layout_marginRight="16dp"
+                        app:sw_thumbColor="@color/app_theme_color"
+                        />
+
+                </LinearLayout>
+
+
+                <!--**** boxed_or_hung TEXT****-->
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <EditText
+                            android:id="@+id/boxed_or_hung"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+                <!--****STARCH TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="STARCH TYPE"
+                        android:textColor="#333333" />
+
+                </LinearLayout>
+
+
+                <!--**** STARCH TEXT****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <Spinner
+                            android:id="@+id/strach_type"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:entries="@array/starch_type"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+                        <!--<EditText
+                            android:id="@+id/strach_type"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />-->
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--****DOORMAN TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="COLLECT FROM DOORMAN"
+                        android:textColor="#333333" />
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="no"
+                        android:id="@+id/doormanText"
+                        android:textColor="#333333" />
+
+                    <com.rey.material.widget.Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:id="@+id/doormanSwitch"
+                        android:layout_below="@+id/logo"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="0dp"
+                        android:layout_marginRight="16dp"
+                        app:sw_thumbColor="@color/app_theme_color"
+                        />
+
+                </LinearLayout>
+
+
+                <!--**** DOORMAN TEXT****-->
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <EditText
+                            android:id="@+id/doorman"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+                <!--****U-RANG BAG TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="NEED U-RANG BAG"
+                        android:textColor="#333333" />
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="no"
+                        android:id="@+id/urang_bagText"
+                        android:textColor="#333333" />
+
+                    <com.rey.material.widget.Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:id="@+id/urang_bagSwitch"
+                        android:layout_below="@+id/logo"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="0dp"
+                        android:layout_marginRight="16dp"
+                        app:sw_thumbColor="@color/app_theme_color"
+                        />
+
+                </LinearLayout>
+
+
+                <!--**** U-RANG BAG TEXT****-->
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <EditText
+                            android:id="@+id/urang_bag"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+
+                <!--****SPICIAL TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SPICIAL INSTRUCTION"
+                        android:textColor="#333333" />
+
+                </LinearLayout>
+
+
+                <!--****SPICIAL TEXT****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <EditText
+                            android:id="@+id/spcl_ins"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--****DRIVING TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DRIVING INSTRUCTION"
+                        android:textColor="#333333" />
+
+                </LinearLayout>
+
+
+                <!--****DRIVING TEXT****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <EditText
+                            android:id="@+id/driving_ins"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--****DRIVING TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SELECT PAYMENT METHOD"
+                        android:textColor="#333333" />
+
+                </LinearLayout>
+
+
+                <!--****PAYMENT TEXT****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <Spinner
+                            android:id="@+id/pay_method"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:entries="@array/payment_type"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+                        <!--<EditText
+                            android:id="@+id/pay_method"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />-->
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--****wash_n_fold TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WASH AND FOLD?"
+                        android:textColor="#333333" />
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="no"
+                        android:id="@+id/wash_n_foldText"
+                        android:textColor="#333333" />
+
+                    <com.rey.material.widget.Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:id="@+id/wash_n_foldSwitch"
+                        android:layout_below="@+id/logo"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="0dp"
+                        android:layout_marginRight="16dp"
+                        app:sw_thumbColor="@color/app_theme_color"
+                        />
+
+                </LinearLayout>
+
+
+                <!--****wash_n_fold TEXT****-->
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <EditText
+                            android:id="@+id/wash_n_fold"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+
+                <!--****isEmergency TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="EMERGENCY?"
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="no"
+                        android:id="@+id/isEmergencyText"
+                        android:textColor="#333333" />
+
+                    <com.rey.material.widget.Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:id="@+id/isEmergencySwitch"
+                        android:layout_below="@+id/logo"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="0dp"
+                        android:layout_marginRight="16dp"
+                        app:sw_thumbColor="@color/app_theme_color"
+                        />
+
+                </LinearLayout>
+
+
+                <!--****isEmergency TEXT****-->
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <EditText
+                            android:id="@+id/isEmergency"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+                <!--****client_type TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WHAT TYPE OF CLINT YOU ARE?"
+                        android:textColor="#333333" />
+
+                </LinearLayout>
+
+
+                <!--****client_type TEXT****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:background="#fff">
+
+                        <Spinner
+                            android:id="@+id/client_type"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:entries="@array/clint_type"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />
+
+                        <!--<EditText
+                            android:id="@+id/client_type"
+                            android:padding="7dp"
+                            android:layout_width="match_parent"
+                            android:textColorHint="#333333"
+                            android:maxLines="1"
+                            android:layout_height="33.5dp"
+                            android:background="#00000000"
+                            />-->
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#EB5D2F">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SETTINGS"
+                        android:textSize="20dp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#EB5D2F">
+
+
+                        <ImageView
+                            android:id="@+id/banar1"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/name"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+
+
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/rounded"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="50dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_avatar"/>
+
+
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#00000000"
+                                android:padding="12dp"
+
+                                android:textColorHint="#fff"
+                                android:hint="NAME"
+                                android:inputType="text"
+                                android:textColor="#fff"
+                                android:textSize="16dp"
+                                />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/rounded"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="50dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_back"/>
+
+
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#00000000"
+                                android:padding="12dp"
+                                android:textColorHint="#ffffff"
+                                android:hint="Email-id"
+                                android:inputType="text"
+                                android:textColor="#fff"
+                                android:textSize="16dp"
+                                />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/rounded"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="50dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/name"/>
+
+
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#00000000"
+                                android:padding="12dp"
+                                android:textColorHint="#ffffff"
+                                android:hint="Password"
+                                android:inputType="textPassword"
+                                android:textColor="#ffffff"
+                                android:textSize="16dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EMAIL NOTIFICATIONS"
+                        android:textSize="14dp"
+                        android:textColor="@color/app_theme_color"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="30dp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Monday"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="30dp"/>
+
+
+                        <com.rey.material.widget.Switch
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layout_below="@+id/logo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="13dp"
+                            android:elevation="0dp"
+                            android:switchPadding="16dp"
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tuesday"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="30dp"/>
+
+
+                        <com.rey.material.widget.Switch
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:layout_below="@+id/logo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="13dp"
+                            android:elevation="0dp"
+                            android:switchPadding="16dp"
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wednesday"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="30dp"/>
+
+
+                        <com.rey.material.widget.Switch
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:layout_below="@+id/logo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="13dp"
+                            android:elevation="0dp"
+                            android:switchPadding="16dp"
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thursday"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="30dp"/>
+
+
+                        <com.rey.material.widget.Switch
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layout_below="@+id/logo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="13dp"
+                            android:elevation="0dp"
+                            android:switchPadding="16dp"
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Friday"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="30dp"/>
+
+
+                        <com.rey.material.widget.Switch
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:layout_below="@+id/logo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="13dp"
+                            android:elevation="0dp"
+                            android:switchPadding="16dp"
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saturday"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="30dp"/>
+
+
+                        <com.rey.material.widget.Switch
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layout_below="@+id/logo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="13dp"
+                            android:elevation="0dp"
+                            android:switchPadding="16dp"
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sunday"
+                            android:textColor="#000"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="30dp"/>
+
+
+                        <com.rey.material.widget.Switch
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:layout_below="@+id/logo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="13dp"
+                            android:elevation="0dp"
+                            android:switchPadding="16dp"
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>-->
+
+
+    <!--****PAY****-->
+    <TextView
+        android:id="@+id/submitSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_theme_color"
+        android:text="SCHEDULE PICK UP"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>

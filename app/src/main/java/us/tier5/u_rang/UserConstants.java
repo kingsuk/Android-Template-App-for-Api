@@ -5,4 +5,5 @@ package us.tier5.u_rang;
  */
 public class UserConstants {
     public static final String BASE_URL = "http://162.243.64.194/";
+    public static final String IMAGE_FOLDER = "public/app_images/";
 }

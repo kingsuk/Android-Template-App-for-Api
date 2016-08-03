@@ -3,11 +3,14 @@ package us.tier5.u_rang;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -18,11 +21,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+
+import layout.SchoolDonation_fragment;
+
 /**
  * Created by root on 25/7/16.
  */
 public class Dashboard extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,SchoolDonation_fragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,6 +135,9 @@ public class Dashboard extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        Fragment fragment = null;
+        Class fragmentClass = null;
+
         if (id == R.id.nav_price) {
             // Handle the camera action
             //Toast.makeText(getApplication(),"camera clicked",Toast.LENGTH_SHORT).show();
@@ -140,11 +149,19 @@ public class Dashboard extends AppCompatActivity
             startActivity(i);
 
         } else if (id == R.id.nav_services) {
-
+                Intent i = new Intent(Dashboard.this,DashboardNew.class);
+                startActivity(i);
 
         } else if (id == R.id.nav_school_donation) {
-            Intent i = new Intent(Dashboard.this,History.class);
-            startActivity(i);
+            fragmentClass = SchoolDonation_fragment.class;
+            try {
+                fragment = (Fragment) fragmentClass.newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.containerView, fragment).commit();
+            setTitle("Faq");
 
         } else if (id == R.id.nav_contact) {
             Intent i = new Intent(Dashboard.this,Contact.class);
@@ -158,5 +175,11 @@ public class Dashboard extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(String swag) {
+        Toast.makeText(getApplicationContext(),swag,Toast.LENGTH_SHORT).show();
+
     }
 }

@@ -16,8 +16,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-
         android:orientation="horizontal">
 
         <FrameLayout
@@ -26,14 +24,14 @@
             android:background="#555c5b"
             >
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/layer2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/name"
                 android:padding="16dp"/>
         </FrameLayout>
 
         <EditText
-            android:id="@+id/cardHolderGame"
+            android:id="@+id/cardholder_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#626562"
@@ -69,13 +67,13 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/name"
+                android:src="@drawable/card"
                 android:padding="16dp"/>
         </FrameLayout>
 
 
         <Spinner
-            android:id="@+id/spinnerCardType"
+            android:id="@+id/cardtype"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/card_type"
@@ -107,12 +105,12 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/address"
+                android:src="@drawable/cardnumber"
                 android:padding="16dp"/>
         </FrameLayout>
 
         <EditText
-            android:id="@+id/creditCardNo"
+            android:id="@+id/card_no"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#626562"
@@ -146,11 +144,11 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/layer5"
+                android:src="@drawable/cvv"
                 android:padding="16dp"/>
         </FrameLayout>
         <EditText
-            android:id="@+id/cvv2"
+            android:id="@+id/cvv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#626562"
@@ -179,7 +177,7 @@
             android:layout_weight="1"
             >
             <Spinner
-                android:id="@+id/expirationMonth"
+                android:id="@+id/select_month"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/month_array"
@@ -196,7 +194,7 @@
             android:layout_weight="1"
             >
             <Spinner
-                android:id="@+id/expirationYear"
+                android:id="@+id/select_year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/year_array"
