@@ -80,6 +80,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="us.tier5.u_rang.DashboardNew" />
         </activity>
+        <activity android:name=".DetailedPickup"></activity>
     </application>
 
 </manifest>

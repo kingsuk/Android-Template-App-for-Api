@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import us.tier5.u_rang.AsyncResponse;
+import us.tier5.u_rang.CheckNetwork;
 import us.tier5.u_rang.R;
 import us.tier5.u_rang.RegisterUser;
 import us.tier5.u_rang.UserConstants;
@@ -105,8 +106,17 @@ public class Neighborhood_fragment extends Fragment implements AsyncResponse.Res
 
         lm = (LinearLayout) fragView.findViewById(R.id.llParent);
         registerUser.delegate = this;
-        registerUser.register(data,route);
-        loading = ProgressDialog.show(getContext(), "Please Wait",null, true, true);
+
+        if(CheckNetwork.isInternetAvailable(getContext())) //returns true if internet available
+        {
+            registerUser.register(data,route);
+            loading = ProgressDialog.show(getContext(), "Please Wait",null, true, true);
+        }
+        else
+        {
+            Toast.makeText(getContext(),"No internet connection",Toast.LENGTH_SHORT).show();
+        }
+
 
         return fragView;
     }
@@ -148,6 +158,11 @@ public class Neighborhood_fragment extends Fragment implements AsyncResponse.Res
 
     @Override
     public void onPause() {
+        for (int i=0; i<asyncTasksArr.size();i++)
+        {
+            asyncTasksArr.get(i).cancel(true);
+            //Log.i("kingsukmajumder","stopped "+i+" async task");
+        }
         Log.i("kingsukmajumder","onPause");
         super.onPause();
     }
@@ -185,7 +200,7 @@ public class Neighborhood_fragment extends Fragment implements AsyncResponse.Res
                     final TextView loadingTV = (TextView) inflatedLayout.findViewById(R.id.tvNeighborLoading);
                     /*View linlaHeaderProgress = (View) findViewById(R.id.progressBarNeighbor);
                     linlaHeaderProgress.setVisibility(View.VISIBLE);*/
-                    final ImageView imageViewNeigbor = (ImageView) inflatedLayout.findViewById(R.id.ivNeighborhoodImage);
+                    final ImageView imageViewNeigbor = (ImageView) inflatedLayout.findViewById(R.id.ivServiceImage);
 
                     try{
                          asyncTask = new AsyncTask<Void, Void, Void>() {

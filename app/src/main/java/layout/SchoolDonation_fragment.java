@@ -9,12 +9,10 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -30,7 +28,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import us.tier5.u_rang.AsyncResponse;
-import us.tier5.u_rang.History;
+import us.tier5.u_rang.CheckNetwork;
 import us.tier5.u_rang.R;
 import us.tier5.u_rang.RegisterUser;
 import us.tier5.u_rang.UserConstants;
@@ -107,9 +105,18 @@ public class SchoolDonation_fragment extends Fragment implements AsyncResponse.R
         View fragView = inflater.inflate(R.layout.content_faq, container, false);
 
         lm = (LinearLayout) fragView.findViewById(R.id.llParent);
-        registerUser.delegate = this;
-        registerUser.register(data,route);
-        loading = ProgressDialog.show(getContext(), "Please Wait",null, true, true);
+
+        if(CheckNetwork.isInternetAvailable(getContext())) //returns true if internet available
+        {
+            registerUser.delegate = this;
+            registerUser.register(data,route);
+            loading = ProgressDialog.show(getContext(), "Please Wait",null, true, true);
+        }
+        else
+        {
+            Toast.makeText(getContext(),"No internet connection",Toast.LENGTH_SHORT).show();
+        }
+
 
         return fragView;
     }
@@ -150,6 +157,16 @@ public class SchoolDonation_fragment extends Fragment implements AsyncResponse.R
     }
 
     @Override
+    public void onPause() {
+        for (int i=0; i<asyncTasksArr.size();i++)
+        {
+            asyncTasksArr.get(i).cancel(true);
+            //Log.i("kingsukmajumder","stopped "+i+" async task");
+        }
+        super.onPause();
+    }
+
+    @Override
     public void processFinish(String output) {
         loading.dismiss();
 
@@ -180,7 +197,7 @@ public class SchoolDonation_fragment extends Fragment implements AsyncResponse.R
                     TextView text = (TextView) inflatedLayout.findViewById(R.id.tvNeighborhoodText);
                     text.setText("Total Money Donated till date: "+gainedMoneyDouble+"\n Total pending till date: "+pendingMonetDouble);
                     final TextView loadingTV = (TextView) inflatedLayout.findViewById(R.id.tvNeighborLoading);
-                    final ImageView imageViewNeigbor = (ImageView) inflatedLayout.findViewById(R.id.ivNeighborhoodImage);
+                    final ImageView imageViewNeigbor = (ImageView) inflatedLayout.findViewById(R.id.ivServiceImage);
 
                     AsyncTask asyncTask = new AsyncTask<Void, Void, Void>() {
                         Bitmap bmp;

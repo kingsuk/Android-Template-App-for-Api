@@ -69,7 +69,7 @@
                         android:layout_marginRight="16dp"
                         android:background="#fff">
 
-                        <EditText
+                        <TextView
                             android:id="@+id/userName"
                             android:padding="7dp"
                             android:layout_width="match_parent"
@@ -139,7 +139,7 @@
                         android:layout_marginRight="16dp"
                         android:background="#fff">
 
-                        <EditText
+                        <TextView
                             android:id="@+id/name"
                             android:padding="7dp"
                             android:layout_width="match_parent"
@@ -167,7 +167,7 @@
                         android:layout_weight="2.5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="PICK-Up ADDRESS"
+                        android:text="PICK-Up ADDRESS *"
                         android:textColor="#333333" />
 
                 </LinearLayout>
@@ -217,7 +217,7 @@
                         android:layout_weight="2.5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="PICK-Up DATE"
+                        android:text="PICK-Up DATE *"
                         android:textColor="#333333" />
                     <TextView
                         android:layout_weight="2.5"
@@ -230,6 +230,7 @@
                         android:layout_width="22dp"
                         android:layout_height="wrap_content"
                         android:src="@drawable/fa_calender"
+                        android:layout_marginRight="16dp"
                         android:id="@+id/pick_up_date"/>
                 </LinearLayout>
 
@@ -278,7 +279,7 @@
                         android:layout_weight="2.5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="SCHEDULE"
+                        android:text="SCHEDULE *"
                         android:textColor="#333333" />
 
                 </LinearLayout>
@@ -698,7 +699,7 @@
                         android:layout_weight="2.5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="SELECT PAYMENT METHOD"
+                        android:text="SELECT PAYMENT METHOD *"
                         android:textColor="#333333" />
 
                 </LinearLayout>
@@ -899,7 +900,7 @@
                         android:layout_weight="2.5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="WHAT TYPE OF CLINT YOU ARE?"
+                        android:text="WHAT TYPE OF CLINT YOU ARE? *"
                         android:textColor="#333333" />
 
                 </LinearLayout>

@@ -5,8 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
@@ -14,7 +12,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -92,7 +89,7 @@ public class Neighborhood extends AppCompatActivity implements AsyncResponse.Res
                     final TextView loadingTV = (TextView) inflatedLayout.findViewById(R.id.tvNeighborLoading);
                     /*View linlaHeaderProgress = (View) findViewById(R.id.progressBarNeighbor);
                     linlaHeaderProgress.setVisibility(View.VISIBLE);*/
-                    final ImageView imageViewNeigbor = (ImageView) inflatedLayout.findViewById(R.id.ivNeighborhoodImage);
+                    final ImageView imageViewNeigbor = (ImageView) inflatedLayout.findViewById(R.id.ivServiceImage);
 
                     new AsyncTask<Void, Void, Void>() {
                         Bitmap bmp;

@@ -58,7 +58,7 @@
                     <ImageView
                         android:layout_width="150dp"
                         android:layout_height="250dp"
-                        android:id="@+id/ivNeighborhoodImage"
+                        android:id="@+id/ivServiceImage"
                         android:src="@drawable/notification_template_icon_bg"
                         android:padding="10dp"
                         android:layout_alignParentTop="true"
@@ -73,9 +73,9 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="@string/asdkfjhadsh_fjasdhfk_jadshkjfh_adkjshfk_asjdhfkla_sdjfkhad_skjfhaskjdf_kjadshf_kjashdfkj_asdhjfk_aksjdhfasdkjfh_askdjfh_aksdfjh_asdjfh_akjdsfh_aksdjfh_ajhdfkajhsdf_kjahsdfk_jajsdhf_kajsdhfkaj_sdfkjadshfkj_asdhfkj"
                         android:id="@+id/tvNeighborhoodText"
-                        android:layout_toEndOf="@+id/ivNeighborhoodImage"
+                        android:layout_toEndOf="@+id/ivServiceImage"
                         android:padding="10dp"
-                        android:layout_below="@+id/ivNeighborhoodImage"
+                        android:layout_below="@+id/ivServiceImage"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true" />
 

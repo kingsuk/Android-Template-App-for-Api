@@ -97,21 +97,22 @@ public class Price_fragment extends Fragment implements AsyncResponse.Response{
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("PRICES");
         View fragView = inflater.inflate(R.layout.fragment_price_fragment, container, false);
 
-        registerUser.delegate = this;
+
         mySaveInstanceState = savedInstanceState;
 
         listview = (ListView) fragView.findViewById(R.id.listView2);
         beanClassArrayList = new ArrayList<BeanClassForListView>();
 
-        loading = ProgressDialog.show(getContext(), "Please Wait",null, true, true);
+
         if(CheckNetwork.isInternetAvailable(getContext())) //returns true if internet available
         {
+            registerUser.delegate = this;
+            loading = ProgressDialog.show(getContext(), "Please Wait",null, true, true);
             registerUser.register(data,route);
         }
         else
         {
-            Snackbar.make(fragView,"No Internet Connection", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
+            Toast.makeText(getContext(),"No internet connection",Toast.LENGTH_SHORT).show();
         }
 
 

@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import us.tier5.u_rang.R;
 
@@ -65,7 +66,11 @@ public class Service_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_service_fragment, container, false);
+        View fragView = inflater.inflate(R.layout.service, container, false);
+        LinearLayout service_ll = (LinearLayout) fragView.findViewById(R.id.service_ll);
+        //View inflatedLayout= getLayoutInflater(savedInstanceState).inflate(R.layout.service, null, false);
+
+        return fragView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

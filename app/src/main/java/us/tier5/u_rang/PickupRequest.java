@@ -1,6 +1,7 @@
 package us.tier5.u_rang;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -34,8 +35,8 @@ public class PickupRequest extends AppCompatActivity implements AsyncResponse.Re
     ProgressDialog loading;
 
     //variables
-    EditText userName;
-    EditText name;
+    TextView userName;
+    TextView name;
     EditText address;
     ImageView pick_up_date;
     TextView pick_up_dateText;
@@ -93,13 +94,26 @@ public class PickupRequest extends AppCompatActivity implements AsyncResponse.Re
 
         //fetching all the data b user id
         data.put("user_id",""+user_id);
-        loading = ProgressDialog.show(PickupRequest.this, "Please Wait",null, true, true);
-        registerUser.register(data,route);
+
+        registerUser.delegate = this;
+        registerHandler.delegate = this;
+
+        if(CheckNetwork.isInternetAvailable(getApplicationContext())) //returns true if internet available
+        {
+            loading = ProgressDialog.show(PickupRequest.this, "Please Wait",null, true, true);
+            registerUser.register(data,route);
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"No internet connection",Toast.LENGTH_SHORT).show();
+        }
+
+
 
 
         //edit text initialization
-        userName = (EditText) findViewById(R.id.userName);
-        name = (EditText) findViewById(R.id.name);
+        userName = (TextView) findViewById(R.id.userName);
+        name = (TextView) findViewById(R.id.name);
         address = (EditText) findViewById(R.id.address);
         schedule = (Spinner) findViewById(R.id.schedule);
         strach_type = (Spinner) findViewById(R.id.strach_type);
@@ -135,8 +149,7 @@ public class PickupRequest extends AppCompatActivity implements AsyncResponse.Re
             }
         });
 
-        registerUser.delegate = this;
-        registerHandler.delegate = this;
+
 
         boxed_or_hungSwitch = (com.rey.material.widget.Switch) findViewById(R.id.boxed_or_hungSwitch);
         boxed_or_hungText = (TextView) findViewById(R.id.boxed_or_hungText);
@@ -244,12 +257,30 @@ public class PickupRequest extends AppCompatActivity implements AsyncResponse.Re
     public void registerProcessFinish(String response) {
         loading.dismiss();
         Log.i("kingsukmajumder","the response is  "+response);
+        try{
+            JSONObject jsonObject = new JSONObject(response);
+            if(jsonObject.getBoolean("status"))
+            {
+                Toast.makeText(getApplicationContext(),jsonObject.getString("message"),Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(PickupRequest.this,DashboardNew.class);
+                startActivity(intent);
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(),jsonObject.getString("message"),Toast.LENGTH_SHORT).show();
+            }
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(getApplicationContext(),"Error while placing order!",Toast.LENGTH_SHORT).show();
+            Log.i("kingsukmajumder",e.toString());
+        }
     }
 
     @Override
     public void processFinish(String output) {
         loading.dismiss();
-        //Log.i("kingsukmajumder",""+output);
+        Log.i("kingsukmajumder",""+output);
         try{
             JSONObject jsonObject = new JSONObject(output);
             if(jsonObject.getBoolean("status"))
@@ -285,7 +316,7 @@ public class PickupRequest extends AppCompatActivity implements AsyncResponse.Re
 
     @Override
     public void onClick(View v) {
-        if(order_type.equals("1"))
+        if(!address.getText().toString().equals("") && schedule.getSelectedItemPosition()!=0 && !actualDate.equals("") && pay_method.getSelectedItemPosition()!=0 && client_type.getSelectedItemPosition()!=0)
         {
             data.put("address",address.getText().toString());
             data.put("pick_up_date",actualDate);
@@ -296,13 +327,51 @@ public class PickupRequest extends AppCompatActivity implements AsyncResponse.Re
             data.put("pay_method",""+pay_method.getSelectedItemPosition());
             data.put("client_type",client_type.getSelectedItem().toString());
 
-            Log.i("kingsukmajumder","data is "+data.toString());
-            loading = ProgressDialog.show(PickupRequest.this, "Please Wait",null, true, true);
-            registerHandler.register(data,placeOrderRoute);
+            if(order_type.equals("1"))
+            {
+                Log.i("kingsukmajumder","data is "+data.toString());
+
+
+                if(CheckNetwork.isInternetAvailable(getApplicationContext())) //returns true if internet available
+                {
+                    loading = ProgressDialog.show(PickupRequest.this, "Please Wait",null, true, true);
+                    registerHandler.register(data,placeOrderRoute);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"No internet connection",Toast.LENGTH_SHORT).show();
+                }
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(),"Select items.",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(PickupRequest.this,DetailedPickup.class);
+                intent.putExtra("dataObject",data);
+                startActivity(intent);
+            }
         }
         else
         {
-            Toast.makeText(getApplicationContext(),"it is a detailed pickup",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"All * fields are required!",Toast.LENGTH_SHORT).show();
         }
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("kingsukmajumder","onPause");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("kingsukmajumder","onDestroy");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("kingsukmajumder","onResume");
     }
 }

@@ -58,6 +58,7 @@ public class ConnectToServer {
             }
             else {
                 response="Error Registering";
+
             }
         } catch (Exception e) {
             e.printStackTrace();
